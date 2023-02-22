@@ -1,0 +1,91 @@
+<?php
+function send_email() {
+  if(isset($_POST['submit'])){
+    $to = "minereviewsua@gmail.com";
+    $from = $_POST['Email'];
+    $name = $_POST['Name'];
+    $smedia = $_POST['Smedia'];
+    $message = $_POST['Message'];
+    $subject = "Сообщение";
+    $message = $name . " (" . $smedia . ") написал(а) следующее:" . "\n\n" . $_POST['Message'];
+    $headers = "От:" . $from;
+    mail($to,$subject,$message,$headers);
+    header("Refresh:0");
+  }
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<title>@tks65215.</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/w3lement.css">
+<link rel="stylesheet" href="css/style.css">
+<script src="button.js"></script>
+
+
+<body>
+
+<div class="top">
+  <div style="background-color:#31313a;">
+    <table width="100%" cellspacing="1">
+     <tr>
+      <td align="center" width="33%" height="25px"><div class=" bar-item"><div class="hide-small"><button onclick="window.location.href='http://vk.com/id400559435'" style="border:none; background: none"><b><div class="center" style="text-align: center padding-left:15px; color: white">@tks65215</div><div style="text-align: center; background-color: white; color: black; font-family: 'Lucida Console'; padding-left: 5px; padding-right: 5px;"><div>web developer.</div></div></b></div></button></td></div>
+      <td align="center" width="33%" height="25px"><div class="center">
+    <button onclick="window.location.href='#home'" class="bar-item button smooth ll ripple" style="color: white">Home</button>
+    <button onclick="window.location.href='#about'" class="bar-item button smooth ll ripple" style="color: white">About</button>
+    <button onclick="window.location.href='#services'" class="bar-item button smooth  ripple" style="color: white">Services</button>
+    <button onclick="window.location.href='#contact'" class="bar-item button smooth  ripple" style="color: white">Contact</button>
+    </div></td>
+      <td align="center" width="33%" height="25px"><div class="hide-small">
+      <div class="bar-item center" style="color: white"><a href="tel:+358411601941" style="text-decoration: none"><b>Call:</b> +358411601941</div></a>
+    </div></td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<header class="display-container content wide" style="margin-top: 50px; max-width:1500px;" id="home">
+  <img class="image" src="img/top.jpg" width="2560" height="800">
+  <div class="display-middle margin-top center">
+      <div style="color: white"></div>
+    <h1 class="xxlarge">
+
+    <div class="bar-block">
+  <div class="lime text-black" style="padding-left: 5px"><b>@tks65215</b></div>
+ <div class="black text-white right" style="padding-left: 5px; font-family: 'Lucida Console'"><b>web developer.</b></div>
+</div></h1>
+    
+  </div>
+
+</header>
+
+<div class="content padding" style="max-width:1564px">
+
+
+ 
+  <div style="margin:auto; width: 50%" id="contact">
+    <h3 class="center border-bottom border-light-grey padding-16">Contact with me</h3>
+    <form action="">
+      <input class="input border" type="text" placeholder="Your name" required name="Name">
+      <input class="input section border" type="email" placeholder="Your Email" required name="Email">
+      <input class="input section border" type="text" placeholder="Link to your social profile" required name="Smedia">
+      <input class="input section border" type="text" placeholder="Your message" required name="Message">
+      <button class="button black section" type="submit" name="submit" value="Submit" onclick="send_email()">
+        Send
+      </button>
+      <a href="http://vk.com/id_tks"><img style="height:40px; weight:40px" src="img/vk.png"></a>
+      <a href="http://telegram.org"><img style="height:40px; weight: 40px" src="img/tg.png"></a>
+    </form>
+  </div>
+  
+</div>
+<div style="height:50px"></div>
+<footer class="center black padding-16">
+  <p>@tks65215.</p>
+<p>2023</p>
+</footer>
+</body>
+</html>
