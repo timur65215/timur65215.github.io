@@ -9,12 +9,10 @@ body {
 }
 
 .smooth {
-	transition: 0.5s;
+	transition: 1s;
 }
 
-.ll:hover {
-    background-color: white;
-}
+
 
 .blur:hover {
 	transition: 0.5s;
