@@ -179,10 +179,16 @@ body {
 
 .bredb {
     padding: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
     font-size: 15pt;
     background-color: darkred;
     color: white;
     border: none;
+}
+
+.bredb:hover {
+    transition: 0.5s;
 }
 
 button .ripple {
