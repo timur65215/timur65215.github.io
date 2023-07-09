@@ -167,7 +167,7 @@ body {
 
 .ff {
     font-family: 'Ubuntu';
-    font-size: 15pt;
+    font-size: 10pt;
 }
 
 .blur:hover {
@@ -346,7 +346,7 @@ figure.effect-text-three:hover img {
 }
 figure.effect-text-three figcaption {
     text-align: center;
-    font-size: 45pt;
+    font-size: 30pt;
     vertical-align:center;
 }
 figure.effect-text-three h3 {
