@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>@tks65215.</title>
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="css/w3lement.css">
+<link rel="stylesheet" href="css/style.css">
+
+<script src="button.js"></script>
+  <link href="libs/itc-slider.css" rel="stylesheet">
+  <script src="libs/itc-slider.js" defer></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+
+<div class="top">
+  <div style="background-color:#31313a; padding-top: 5px; padding-bottom: 5px">
+    <table width="100%" cellspacing="1">
+     <tr>
+      <td align="center" width="33%" height="25px"><div class=" bar-item"><div class="hide-small"><button onclick="window.location.href='https://github.com/timur65215'" style="border:none; background: none"><b><div class="center" style="text-align: center padding-left:15px; color: white">@tks65215</div><div style="text-align: center; background-color: white; color: black; font-family: 'Lucida Console'; padding-left: 5px; padding-right: 5px;"><div>web developer.</div></div></b></div></button></td></div>
+      <td align="center" width="33%" height="25px"><div class="center">
+    <button onclick="window.location.href='index.html#home'" class="ff button smooth ll" style="color: white">Home</button>
+    <button onclick="window.location.href='index.html#about'" class="ff button smooth ll" style="color: white">About</button>
+    <button onclick="window.location.href='samples.html'" class="ff button smooth " style="color: white">Work samples</button>
+    <button onclick="window.location.href='index.html#contact'" class="ff button smooth " style="color: white">Contact</button>
+    </div></td>
+      <td align="center" width="33%" height="25px"><div class="hide-small">
+      <div class="bar-item center" style="color: white"><a href="tel:+358411601941" style="text-decoration: none"><b>Call:</b> +358411601941</div></a>
+    </div></td>
+    </tr>
+    </table>
+  </div>
+</div>
+
+<div class="container" style="padding-top: 5%; width: 100%; height: auto; margin: auto; text-align: center; background-color: #000">
+            <div class="hover-text-one">
+  <figure onclick="window.location.href='wannapizza/index.html'" class="effect-text-three">
+    <img class="image" src="img/wannapizza.jpg">
+      <figcaption>
+  <h3>"Wanna pizza"</h3>
+  <p>Pizzeria website</p>
+      </figcaption>     
+  </figure>
+   <figure onclick="window.location.href='flower/index.html'" class="effect-text-three">
+   <img class="image" src="img/flower.jpg">
+      <figcaption>
+  <h3>Winter flower garden</h3>
+  <p>Winter flower garden website</p>
+      </figcaption>     
+  </figure>
+            </div>
+</div>
+<footer class="center padding-16" style="background-color: #181818; color: white">
+  <p>@tks65215.</p>
+<p>2023</p>
+</footer>
+</body>
+<?php
+function send_email() {
+  if(isset($_POST['submit'])){
+    $to = "minereviewsua@gmail.com";
+    $from = $_POST['Email'];
+    $name = $_POST['Name'];
+    $smedia = $_POST['Smedia'];
+    $message = $_POST['Message'];
+    $subject = "Сообщение";
+    $message = $name . " (" . $smedia . ") написал(а) следующее:" . "\n\n" . $_POST['Message'];
+    $headers = "От:" . $from;
+    mail($to,$subject,$message,$headers);
+    header("Refresh:0");
+  }
+}
+?>
+
+</html>
