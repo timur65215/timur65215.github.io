@@ -225,8 +225,15 @@ box-shadow: 0px 0px 17px -1px rgba(0,0,0,0.75);
 }
 
 .top {
+    opacity: 0.5;
+    transition: 0.3s;
     z-index: 6;
 	margin-bottom: 20px;
+}
+
+.top:hover {
+  opacity: 1;
+  transition: 0.3s;
 }
 
 .ccol {
@@ -362,10 +369,10 @@ figure.effect-text-three h3::after {
     height: 3px;
     background: #fff;
     content: '';
-    -webkit-transition: -webkit-transform 0.35s;
-    transition: transform 0.35s;
-    -webkit-transform: translate3d(-100%,0,0);
-    transform: translate3d(-100%,0,0);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+    -webkit-transform: translate3d(-120%,0,0);
+    transform: translate3d(-120%,0,0);
 }
 figure.effect-text-three:hover h3::after {
     -webkit-transform: translate3d(0,0,0);
